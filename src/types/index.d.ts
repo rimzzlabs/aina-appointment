@@ -49,6 +49,15 @@ declare global {
     createdAt: string;
   };
 
+  type Product = {
+    name: string;
+    description: string;
+    price: number;
+    id: string;
+    updatedAt: string;
+    createdAt: string;
+  };
+
   type PageProps = {
     params: Record<string, string>;
     searchParams: Record<string, string>;

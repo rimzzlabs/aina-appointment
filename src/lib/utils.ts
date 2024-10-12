@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import { format } from "date-fns";
 import { toZonedTime } from "date-fns-tz";
 import { id } from "date-fns/locale";
+import { toFloat } from "radash";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -44,4 +45,17 @@ export function formatDateToMySqlString(date: Date, timeZone = "Asia/Jakarta") {
 export function onUpdateSchemaFn() {
   let d = new Date();
   return pipe(d, formatDateToMySqlString);
+}
+
+export function formatPrice(n?: number | string | null) {
+  if (typeof n === "undefined" || n === null) return "Rp. 0";
+
+  let number = typeof n === "string" ? toFloat(n, 0) : n;
+  let fmt = new Intl.NumberFormat("id-ID", {
+    currency: "IDR",
+    style: "currency",
+    minimumFractionDigits: 2,
+  });
+
+  return fmt.format(number);
 }

@@ -6,6 +6,7 @@ import {
   StethoscopeIcon,
   Users2Icon,
   type LucideIcon,
+  BrushIcon,
 } from "lucide-react";
 
 export type MenuItem = {
@@ -43,6 +44,13 @@ export function getSidebarMenu(pathname: string, role?: Role): Array<MenuItem> {
       active: pipe(pathname, S.endsWith("/service/list")),
     },
     {
+      icon: BrushIcon,
+      label: "Daftar Produk",
+      path: "/product/list",
+      visible: pipe(role, F.equals("admin")),
+      active: pipe(pathname, S.endsWith("/product/list")),
+    },
+    {
       icon: Users2Icon,
       label: "Daftar User",
       path: "/user/list",
@@ -70,6 +78,13 @@ export function getSidebarMenu(pathname: string, role?: Role): Array<MenuItem> {
       path: "/customer/doctor",
       visible: pipe(role, F.equals("customer")),
       active: pipe(pathname, S.endsWith("/customer/doctor")),
+    },
+    {
+      icon: BrushIcon,
+      label: "Daftar Produk",
+      path: "/customer/product",
+      visible: pipe(role, F.equals("customer")),
+      active: pipe(pathname, S.endsWith("/customer/product")),
     },
   ];
 }

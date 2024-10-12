@@ -2,7 +2,8 @@ import { signInSchema } from "@/features/auth/__schema";
 import { D, pipe } from "@mobily/ts-belt";
 import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import { getUserByHttp, signInViaHTTP } from "./http";
+import { getUserByHttp } from "./http";
+import { verifyCredentials } from "./verify";
 
 export const AUTH_CONFIG = {
   trustHost: true,
@@ -19,12 +20,11 @@ export const AUTH_CONFIG = {
         }
 
         let payload = parsedCredentials.data;
-        let res = await signInViaHTTP(payload);
+        let res = await verifyCredentials(payload.email, payload.password);
 
         if (
           res === "not found" ||
           res === "invalid password" ||
-          res === "invalid payload" ||
           res === "deactivated" ||
           res === "server error"
         ) {

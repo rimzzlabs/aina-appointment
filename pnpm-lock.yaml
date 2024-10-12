@@ -104,6 +104,9 @@ dependencies:
   react:
     specifier: ^18
     version: 18.3.1
+  react-currency-input-field:
+    specifier: ^3.8.0
+    version: 3.8.0(react@18.3.1)
   react-day-picker:
     specifier: 8.10.1
     version: 8.10.1(date-fns@4.1.0)(react@18.3.1)
@@ -4650,6 +4653,14 @@ packages:
   /radash@12.1.0:
     resolution: {integrity: sha512-b0Zcf09AhqKS83btmUeYBS8tFK7XL2e3RvLmZcm0sTdF1/UUlHSsjXdCcWNxe7yfmAlPve5ym0DmKGtTzP6kVQ==}
     engines: {node: '>=14.18.0'}
+    dev: false
+
+  /react-currency-input-field@3.8.0(react@18.3.1):
+    resolution: {integrity: sha512-DKSIjacrvgUDOpuB16b+OVDvp5pbCt+s+RHJgpRZCHNhzg1yBpRUoy4fbnXpeOj0kdbwf5BaXCr2mAtxEujfhg==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.3.1
     dev: false
 
   /react-day-picker@8.10.1(date-fns@4.1.0)(react@18.3.1):

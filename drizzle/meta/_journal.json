@@ -50,6 +50,13 @@
       "when": 1728394604100,
       "tag": "0006_safe_luminals",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1728744488739,
+      "tag": "0007_breezy_nova",
+      "breakpoints": true
     }
   ]
 }

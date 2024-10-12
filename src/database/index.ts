@@ -16,7 +16,7 @@ const globalForDb = globalThis as unknown as {
 };
 
 const connection =
-  globalForDb.conn ??
+  globalForDb.conn ||
   createPool({
     host: DB_HOST,
     user: DB_USER,
