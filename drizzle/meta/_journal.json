@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1727880991538,
+      "tag": "0000_great_may_parker",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1728214884158,
+      "tag": "0001_typical_triathlon",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1728219298680,
+      "tag": "0002_classy_killraven",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1728226832456,
+      "tag": "0003_reflective_omega_flight",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1728376169604,
+      "tag": "0004_groovy_ulik",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1728393252937,
+      "tag": "0005_faithful_wonder_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1728394604100,
+      "tag": "0006_safe_luminals",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `appoinment` MODIFY COLUMN `appointment_date` datetime(3) NOT NULL;

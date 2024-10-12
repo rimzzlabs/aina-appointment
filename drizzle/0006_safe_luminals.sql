@@ -1,0 +1,1 @@
+ALTER TABLE `doctor` ADD `deleted` boolean DEFAULT false;
