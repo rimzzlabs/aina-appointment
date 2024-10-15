@@ -15,8 +15,8 @@ function getBaseURL() {
         pipe(
           process.env.VERCEL_URL,
           O.fromNullable,
-          O.mapWithDefault("localhost:3000", F.identity),
-          S.prepend("http://")
+          O.mapWithDefault("aina-beauty.up.railway.app", F.identity),
+          S.prepend("https://")
         )
     )
   );
